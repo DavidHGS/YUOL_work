@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+    <link rel="stylesheet" type="text/css" href="css/shop.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="public-header">
+        <h2>DOG&nbsp;&nbsp;<span>CLUB<span></h2>
+    </div>
+    <div class="public-nav">
+        <nav class="navbar navbar-default dog" role="navigation" style="background: #000;margin:0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse" style="width: 40%;margin:0 auto;">
+                    <ul class="nav nav-pills nav-justified ">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="interest.html">INTEREST</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="public-login">
+        <div class="login-logo"></div>
+        <ul class="login-nav ">
+            <li class="item">
+                <div class="border"><a href="">收藏夹</a></div>
+            </li>
+            <li class="item">
+                <div class="border"><a href="">个人信息</a></div>
+            </li>
+            <li class="item">
+                <div class="border"><a href="">设置</a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="maxbody">
+        <div class="public-banner">
+            <div class="banner" style="font-size: 30px;color: #fff; position: relative; height: 80.5%">
+                <div class="banner1">
+                    <img src="images/shop-banner.jpg" style="width:100%;height: 100%;">
+                </div>
+                <div class="banner-title" style="position: absolute;top: 93%;left: 20%; float: left;"><span>Your dog,he is coming to take care of it</span>
+                </div>
+                <div class="jion" style="">
+                        <span><a href="sale.html" style="text-decoration: none;color:#fff;">Join the market</a> </span>
+                </div>
+            </div>
+            <div class="banner2">
+                <div class="zssp">
+                    <p>在售商品</p>
+                </div>
+                <p>Goods on sale</p>
+            </div>
+        </div>
+        <div class="public-body">
+            <div class="body-list  col-xs-12 col-sm-12 col-md-12 col-lg-3" id="body-list" style="padding:0;">
+                <ul style="margin-bottom: 0;">
+                    <li class="light"><span>金毛</span>
+                        <p>Golden retriever</p>
+                    </li>
+                    <li><span>拉布拉多</span>
+                        <p>Labrador</p>
+                    </li>
+                    <li><span>哈士奇</span>
+                        <p>Siberian Husky</p>
+                    </li>
+                    <li><span>柯基</span>
+                        <p>Corgi</p>
+                    </li>
+                    <li><span>比熊</a>
+                    <p>Bichon frise</span>
+                    </li>
+                    <li><span>泰迪</span>
+                        <p>Teddy</p>
+                    </li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+            window.onload = function() {
+                var oli = document.getElementById("body-list").getElementsByTagName('li');
+                var divs = document.getElementById('body-content').querySelectorAll('.oneblock-six');
+                for (var i = 0; i < oli.length; i++) {
+                    oli[i].id = i;
+                    oli[i].onmouseover = function() {
+                        for (var j = 0; j < oli.length; j++) {
+                            oli[j].className = "";
+                            divs[j].style.display = "none";
+                        }
+                        this.className = "light";
+                        divs[this.id].style.display = "block";
+                    }
+                }
+                console.log(divs.length)
+                var oclose1 = document.querySelector("#close");
+                var oalert = document.querySelector(".jdgg");
+                var ospan = document.querySelectorAll(".buy");
+                for (var i = 0; i < ospan.length; i++) {
+                    ospan[i].id = i;
+                    ospan[i].onclick = function() {
+                        oalert.style.display = "block";
+                    }
+                }
+                oclose1.onclick = function() {
+                    oalert.style.display = "none";
+                }
+            }
+            </script>
+            <div class="body-content col-lg-9" id="body-content" style="padding:0;">
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.3-b-s.w4011-16843874320.72.1f6e16a08oIF7J&id=558337164048&rn=a9af5035988f74df5a59b32dcad20d47&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-1.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">幼年金毛（半岁)</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.7e7bd2b7lccAzS&id=561772522475&user_id=3360749321&cat_id=2&is_b=1&rn=e26a1aba9d19a4bae55bcbdd5af8ddb6">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.7e7bd2b7lccAzS&id=561772522475&user_id=3360749321&cat_id=2&is_b=1&rn=e26a1aba9d19a4bae55bcbdd5af8ddb6">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.7e7bd2b7lccAzS&id=561772522475&user_id=3360749321&cat_id=2&is_b=1&rn=e26a1aba9d19a4bae55bcbdd5af8ddb6">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.7e7bd2b7lccAzS&id=561772522475&user_id=3360749321&cat_id=2&is_b=1&rn=e26a1aba9d19a4bae55bcbdd5af8ddb6">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-2.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">拉布拉多</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.7e7bd2b7lccAzS&id=561772522475&user_id=3360749321&cat_id=2&is_b=1&rn=e26a1aba9d19a4bae55bcbdd5af8ddb6">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.4.74f3bdf3GDAncz&id=560695884079&user_id=3360749321&cat_id=2&is_b=1&rn=dabb939769944a19bd7b46d3ff619611">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.4.74f3bdf3GDAncz&id=560695884079&user_id=3360749321&cat_id=2&is_b=1&rn=dabb939769944a19bd7b46d3ff619611">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.4.74f3bdf3GDAncz&id=560695884079&user_id=3360749321&cat_id=2&is_b=1&rn=dabb939769944a19bd7b46d3ff619611">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.4.74f3bdf3GDAncz&id=560695884079&user_id=3360749321&cat_id=2&is_b=1&rn=dabb939769944a19bd7b46d3ff619611">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-3.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">哈士奇</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.4.74f3bdf3GDAncz&id=560695884079&user_id=3360749321&cat_id=2&is_b=1&rn=dabb939769944a19bd7b46d3ff619611">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.69.2d615c62WVDwaH&id=560839336111&rn=3216e3d5d951385f472b2ffccda138bc&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.69.2d615c62WVDwaH&id=560839336111&rn=3216e3d5d951385f472b2ffccda138bc&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.69.2d615c62WVDwaH&id=560839336111&rn=3216e3d5d951385f472b2ffccda138bc&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.69.2d615c62WVDwaH&id=560839336111&rn=3216e3d5d951385f472b2ffccda138bc&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-4.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">柯基</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.69.2d615c62WVDwaH&id=560839336111&rn=3216e3d5d951385f472b2ffccda138bc&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.1688.com/offer/561838994482.html?spm=0.0.0.0.NUEZXZ">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.1688.com/offer/561838994482.html?spm=0.0.0.0.NUEZXZ">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.1688.com/offer/561838994482.html?spm=0.0.0.0.NUEZXZ">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.1688.com/offer/561838994482.html?spm=0.0.0.0.NUEZXZ">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-5.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">比熊犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.1688.com/offer/561838994482.html?spm=0.0.0.0.NUEZXZ">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="oneblock-six" id="oneblock-six" >
+
+
+                    <div class="pannel pannel-1  col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span class="buy" style="display:block;float: left;margin:8px 10px 0;">进店逛逛</span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.68.3815b601h5WA43&id=560394344155&rn=f486c2bdb16fdc16fc4b8a213011a1e9&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.68.3815b601h5WA43&id=560394344155&rn=f486c2bdb16fdc16fc4b8a213011a1e9&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 " style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.68.3815b601h5WA43&id=560394344155&rn=f486c2bdb16fdc16fc4b8a213011a1e9&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.68.3815b601h5WA43&id=560394344155&rn=f486c2bdb16fdc16fc4b8a213011a1e9&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+
+
+                    <div class="pannel pannel-1 col-sm-6 col-md-5 col-md-offset-1 col-lg-4" style="margin-top:70px;">
+                        <img src="images/list-6.jpg" style="width: 250px;height: 254px;">
+                        <div class="sale-name" style="margin-top:8px;">
+                            <span style="margin:10px;">泰迪犬</span><span id="red">价格：390</span>
+                        </div>
+                        <div class="sale-link">
+                            <a href="" style="margin-left:15px;float: left;display:block;"><img src="images/logo1.jpg" style="width:45px;height:45px;"></a>
+                            <span><a style="display:block;float: left;margin:8px 10px 0;" href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-16843874317.68.3815b601h5WA43&id=560394344155&rn=f486c2bdb16fdc16fc4b8a213011a1e9&abbucket=16">进店逛逛</a></span>
+                            <img src="images/logo2.jpg" style="width:35px;height:35px; display: block;float: left;"> 
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+
+                
+                             
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="public-footer">
+        <div class="footer1">
+            <img src="images/interest-footer.jpg" style="width:100%;">
+        </div>
+        <div class="footer2">
+            <p>@2017 网站——宠物 版权所有</p>
+            <ul class="footer-nav">
+                <li><a href="">手机版</a></li>
+                <li class="line"><a href="">本站使用 长大在线搭建</a></li>
+                <li><a href="">管理登陆</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--弹窗-->
+    <div class="jdgg" style="width:480px;height: 240px; z-index: 50;  margin:-120px 0 0 -240px; border:1px solid #eee;top:50%;position:fixed;left: 50%;background: url(images/shop-sale.jpg) no-repeat;background-size: 100%; display: none;">
+        <div class="jdgg-body" style="margin-left:15px;">
+            <div class="jdgg-title" style="font-size:30px; margin-top: 40px;
+         color: #fff;"><span>进店逛逛</span></div>
+            <div class="jdgg-content" style="margin-left:50px; font-size: 18px;">
+                <li>线下卖家:</li>
+                <li>电话：17762663606</li>
+                <li>微信：17762663606</li>
+            </div>
+            <span style="margin-top:5px;margin-left:20px;">（有其他想了解的内容更，欢迎与卖家联系）</span>
+        </div>
+        <input type="button" name="close" value="关闭" id="close" style="margin-left: 410px;margin-top:10px;width: 50px;">
+    </div>
+    <style type="text/css">
+    .jdgg-content li {
+        line-height: 1.6;
+    }
+    </style>
+    </div>
+</body>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script type="bootstrap/bootstrap.min.js"></script>
+
+</html>

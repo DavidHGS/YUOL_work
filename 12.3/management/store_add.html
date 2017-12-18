@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>store_add</title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        color: #5a5a5a;
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #ddd;
+        border-right: 1px solid #eee;
+    }
+
+    .nav-sidebar {
+        margin-right: -21px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+
+    .nav-sidebar>li>a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-sidebar>.active>a,
+    .nav-sidebar>.active>a:hover,
+    .nav-sidebar>.active>a:focus {
+        color: #fff;
+        background-color: #428bca;
+    }
+
+    .main .page-header {
+        border-bottom: 2px solid #302c27;
+        margin-top: 0;
+    }
+
+    .container-fluid {
+        margin-left: 310px;
+        width: 1000px;
+    }
+
+    table {
+        width: 920px;
+    }
+
+    form td {
+        border: 1px solid #eee;
+        line-height: 1.5;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .right-content .np {
+        width: 12.8px;
+        height: 12.8px;
+        background: url(../images/input.png) repeat-x scroll 0px 0px;
+    }
+
+    .right-content .bj {
+        cursor: pointer;
+    }
+
+    .excel {
+        width: 1000px;
+        height: 490px;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    .excel tr {
+        height: 60px;
+    }
+
+    .excel tr,
+    td {
+        text-align: center;
+    }
+
+    .one-block {
+        width: 360px;
+        height: 120px;
+        float: left;
+    }
+
+    .one-block-content {
+        float: left;
+    }
+
+    .one-block span {
+
+        margin: 10px;
+        padding: 10px;
+        display: block;
+        width: 140px;
+        height: 30px;
+        border-bottom: 1px solid;
+        margin-left: 30px;
+    }
+
+    .excel #dog span {
+        border: 1px solid;
+        border-radius: 8px;
+        padding: 10px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="containter container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">后台管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">管理</li>
+                            <li><a href="#">文章管理</a></li>
+                            <li><a href="#">用户管理</a></li>
+                            <li><a href="#">店铺管理</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">管理</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#">文章管理</a></li>
+                    <li><a href="#">用户管理</a></li>
+                    <li><a href="#">店铺管理</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#">登入</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-content">
+            <table style="width:920px;margin-top:15px; margin-bottom: 15px;">
+                <tbody>
+                    <tr style="border:0;">
+                        <td height="26px">
+                            <table width="98%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center">
+                                            <input style="margin-left: 20px;" type="button" name="coolbg np" onclick="location='';" value="添加店铺">
+                                            <input style="margin-left: 20px;" type="button" name="coolbg np" onclick="location='';" value="全部店铺">
+                                            <input style="margin-left: 20px;" type="button" name="coolbg np" onclick="location='';" value="店铺审核">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="excel">
+                <form>
+                    <table>
+                        <tbody>
+                            <table>
+                                <tr>
+                                    <td style="width:100px;">狗狗种类</td>
+                                    <td style="width:700px;">
+                                        <textarea style="width:600px;height: 32px;line-height: 27px;">请选择狗狗的种类。。。</textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:160px;"></td>
+                                    <td id="dog" style="width:830px;">
+                                        <span style="">拉布拉多</span>
+                                        <span style="">泰迪</span>
+                                        <span style="">金毛</span>
+                                        <span style="">柴犬</span>
+                                        <span style="">哈士奇</span>
+                                        <span style="">柯基</span>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;">
+                                    <td style="width:160px;">狗狗介绍</td>
+                                    <td style="width:830px;">狗狗的详细信息</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;border-right: 1px solid #eee;">
+                                <td></td>
+                                <th>
+                                    <div class="one-block-four">
+                                        <div class="one-block one-block-one">
+                                            <div class="one-block-content">
+                                                <span>种类</span>
+                                                <span>标价</span>
+                                            </div>
+                                            <img src="" style="width:170px;height: 95px; border:1px dashed;margin-top: 10px">
+                                        </div>
+                                        <div class="one-block one-block-two">
+                                            <div class="one-block-content">
+                                                <span>种类</span>
+                                                <span>标价</span>
+                                            </div>
+                                            <img src="" style="width:170px;height: 95px;border:1px dashed;margin-top: 10px">
+                                        </div>
+                                        <div class="one-block one-block-three">
+                                            <div class="one-block-content">
+                                                <span>种类</span>
+                                                <span>标价</span>
+                                            </div>
+                                            <img src="" style="width:170px;height: 95px;border:1px dashed;margin-top: 10px">
+                                        </div>
+                                        <div class="one-block one-block-four">
+                                            <div class="one-block-content">
+                                                <span>种类</span>
+                                                <span>标价</span>
+                                            </div>
+                                            <img src="" style="width:170px;height: 95px; border:1px dashed;margin-top: 10px">
+                                        </div>
+
+                                    </div>
+                                </th>
+                                </tr>
+                            </table>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../js/jquery-3.2.0.min.js"></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>

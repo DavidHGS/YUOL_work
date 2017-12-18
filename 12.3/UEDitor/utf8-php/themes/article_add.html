@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>article_add</title>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        color: #5a5a5a;
+    }
+
+
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: #ddd;
+        border-right: 1px solid #eee;
+    }
+
+    .nav-sidebar {
+        margin-right: -21px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+
+    .nav-sidebar>li>a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-sidebar>.active>a,
+    .nav-sidebar>.active>a:hover,
+    .nav-sidebar>.active>a:focus {
+        color: #fff;
+        background-color: #428bca;
+    }
+
+    .main .page-header {
+        border-bottom: 2px solid #302c27;
+        margin-top: 0;
+    }
+
+    .container-fluid {
+        margin-left: 310px;
+        width: 1120px;
+    }
+
+    table {
+        width: 1120px;
+    }
+
+    form td {
+        line-height: 1.5;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+    .right-content .np {
+        width: 12.8px;
+        height: 12.8px;
+        background: url(../images/input.png) repeat-x scroll 0px 0px;
+    }
+
+    .right-content .bj {
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #707070 #cecece #cecece #707070;
+        padding: 2px 4px;
+        height: 24px;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+    input[type="button"]
+    {
+    	height: 22px;
+    }
+
+    tr {
+        height: 33px;
+    }
+
+    * {
+
+        font-family: "宋体";
+    }
+
+    .bline {
+        height: 28px;
+        border-bottom: :1px dotted #bcbcbc;
+    }
+    #edit tr
+    {
+    	border-top:1px dotted #BCBCBC;
+
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="containter container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">后台管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">管理</li>
+                            <li><a href="#">文章管理</a></li>
+                            <li><a href="#">用户管理</a></li>
+                            <li><a href="#">店铺管理</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">管理</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#">文章管理</a></li>
+                    <li><a href="#">用户管理</a></li>
+                    <li><a href="#">店铺管理</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="#">登入</a></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-content">
+            <table style="width:1200px;margin-top:15px; margin-bottom: 15px;">
+                <tbody>
+                    <tr>
+                        <td height="26px">
+                            <table width="98%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="center">
+                                            <input type="button" name="coolbg np" onclick="location='';" value="添加文章">
+                                            <input type="button" name="coolbg np" onclick="location='';" value="全部文章">
+                                            <input type="button" name="coolbg np" onclick="location='';" value="文章审核">
+                                            <input type="button" name="coolbg np" onclick="location='';" value="文章回收站">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td width="90%">
+                            <img src="../images/book.gif" height="14" width="20" style="margin-bottom: 4 px;">&nbsp<a href="#"><u>文章列表</u></a>>>发布文章
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form id="edit">
+                <table width="98%" border="0" align="center" cellpadding="2" cellspacing="2" id="needset" style="border:1px solid rgb(207,207,207);background:rgb(255,255,255);">
+                    <tbody>
+                        <tr >
+                            <td height="24" colspan="5" class="bline">
+                                <table width="800" border="0" cellspacing="0" cellpadding="0">
+                                    <tr style="border:0px;">
+                                        <td style="width:90px;">&nbsp;文章标题:</td>
+                                        <td style="width:408px">
+                                            <input type="text" name="title" value style="width: 388px;">
+                                        </td>
+                                        <td style="width:90px;">&nbsp;简略标题:</td>
+                                        <td>
+                                            <input type="text" name="shorttitle" id="shorttitle" style="width:150px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                        <tr id="pictable">
+                            <td height="24" colspan="5" class="bline">
+                                <table width="800" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:50px;">&nbsp;缩略图：</td>
+                                            <td width="560px;">
+                                                <input type="text" name="" style="width:240px;">
+                                                <input type="button" name="sublime1" value="本地上传" style="width:70px;cursor:pointer;">
+                                                <input type="button" name="sublime2" value="裁剪" style="width:70px;cursor:pointer;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                        	<td height="24" colspan="5" class="bline">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td style="width:90px;">&nbsp;文章来源：</td>
+                                        <td style="width:240px;">
+                                            <input type="text" name="source" style="width:160px;">
+                                            <input type="button" name="selsourse" value="选择">
+                                        </td>
+                                        <td style="width:50px;">作者：</td>
+                                        <td>
+                                            <input type="text" name="writer" style="width:120px;">
+                                            <input type="button" name="selwriter" value="选择">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        </tr>
+
+
+
+                        <tr>
+                        	<td height="24" colspan="5" class="bline">
+                        		<table width="800" border="0" cellspacing="0" cellpadding="0">
+                        			<tbody>
+                        				<tr>
+                        					<td width="60" style="height: 60px;line-height: 80px;"> &nbsp;内容摘要：
+                        						
+                        					</td>
+                        					<td width="449">
+                        						<textarea name="description" rows="5" id="descriptiom" style="width:80%;height: 50px;"></textarea>
+                        						<td width="261">&nbsp;</td>
+                        					</td>
+                        				</tr>
+                        			</tbody>
+                        		</table>
+                        	</td>
+                        </tr>
+
+
+
+                        <tr style="margin-top:20px;">
+                        	<td height="28" colspan="2" bgcolor="#f9fcef" class="bline">
+                        		<div style="float:left;line-height: 45px;">&nbsp;<strong>文章内容:</strong></div>
+                        	</td>
+                        </tr>
+
+
+
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </form>
+            <form width="97%" border="0" action=""></form>
+        </div>
+    </div>
+    </div>
+    <script src="../js/jquery-3.2.0.min.js"></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>
